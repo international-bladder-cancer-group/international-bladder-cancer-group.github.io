@@ -300,6 +300,7 @@ body {
   flex-direction: column;
   margin-left: 1rem;
   margin-right: 1rem;
+  gap: 1rem;
 }
 @media (max-width: 36rem) {
   .person-card .person-text {
@@ -312,21 +313,30 @@ body {
   flex-direction: row;
   align-items: baseline;
   gap: 1rem;
+  text-align: center;
+}
+@media (max-width: 36rem) {
+  .person-card .person-text .person-identifiers {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
 }
 .person-card .person-text .person-identifiers .person-name {
   font-size: 24pt;
   font-weight: bold;
-  margin-bottom: 1rem;
   margin-top: 0;
+  margin-bottom: 0;
 }
 .person-card .person-text .person-identifiers .person-title {
   font-style: italic;
-  margin-bottom: 1rem;
   margin-top: 0;
+  margin-bottom: 0;
 }
 .person-card .person-text .person-positions ul {
   margin-top: 0;
   margin-bottom: 0;
+  padding-inline-start: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
