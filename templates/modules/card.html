@@ -1,0 +1,12 @@
+{% macro card(title, info, link) -%}
+<div class="card">
+    <p class="card-title">{{ title | safe }}</p>
+    <p class="card-info">{{ info | safe }}</p>
+    {% if link != "" %}
+        <div class="card-link">
+            <a href={{ link | safe }}>View&nbsp;more&nbsp;&rArr;</a>
+        </div>
+    {% endif %}
+</div>
+{%- endmacro %}
+

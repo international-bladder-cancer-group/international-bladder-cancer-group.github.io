@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% import 'modules/personcard.html' as personcard %}
+
+{% block c_title %}GSRGT{% endblock %}
+
+{% block c_head %}
+<div class="image-head">
+    <h2>International Bladder Cancer Group</h2>
+    <h1>{% block c_preview_title %}Global Society for Rare GU Tumors{% endblock %}</h1>
+</div>
+{% endblock %}
+
+{% block c_main %}
+
+<p>
+{% block c_preview_summary %}
+In 2021, the International Bladder Cancer Group (IBCG) and Global Society of Rare GU Tumors (GSRGT) launched a joint committee on rare variants of bladder cancer. Bladder cancer is a significant global health issue, and the incidence of rare variants is increasing. This committee brings together stakeholders from both organizations to collaborate on research, education, and clinical trial endpoints with a focus on rare bladder cancer histologic subtypes and genetic variants.
+{% endblock %}
+</p>
+
+{% for id in [
+    18,
+    6,
+    27,
+    50,
+    1,
+    33,
+    75,
+    73,
+    74,
+    72
+    ] %}
+    {% set p = people[id] %}
+    {{ personcard.personcard(p.id, p.name, p.title, p.positions, p.image_url) }}
+{% endfor %}
+
+
+{% endblock %}
+

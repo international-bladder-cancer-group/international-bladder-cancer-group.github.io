@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <title>Newsletter - IBCG</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+            <a href="/collaborations/">Collaborations</a>
+            <a href="/events/">Events</a>
+            <a href="/library/">Library</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div id="main-pane">
+            
+            <div id="content-main">
+                
+
+<h1>Newsletter</h1>
+
+    <script>
+        function loadIssue(selection) {
+            $('#viewer').attr('data', selection.value);
+            $('#viewer a:first').attr('href', selection.value);
+        }
+    </script>
+
+<select name="issue" class="dropdown" onchange="loadIssue(this);">
+    
+    <option value="/newsletter-issues/2024.2.pdf">2024 vol. 2</option>
+    
+    <option value="/newsletter-issues/2024.1.pdf">2024 vol. 1</option>
+    
+    <option value="/newsletter-issues/2023.1.pdf">2023 vol. 1</option>
+    
+    <option value="/newsletter-issues/2022.2.pdf">2022 vol. 2</option>
+    
+    <option value="/newsletter-issues/2022.1.pdf">2022 vol. 1</option>
+    
+</select>
+
+<object id="viewer" data="/newsletter-issues/2024.2.pdf" type="application/pdf">
+    <a href="/newsletter-issues/2024.2.pdf">View selected issue as PDF</a>
+</object>
+
+
+            </div>
+        </div>
+    </body>
+
+</html>

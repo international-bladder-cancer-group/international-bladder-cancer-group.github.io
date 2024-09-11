@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <title>Publications - IBCG</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+            <a href="/collaborations/">Collaborations</a>
+            <a href="/events/">Events</a>
+            <a href="/library/">Library</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div id="main-pane">
+            
+            <div id="content-main">
+                
+<div class="link-card">
+    <p class="card-title">FDA Guidance Document on BCG Unresponsive NMIBC incorporating IBCG Recommendations</p>
+    <div class="card-link">
+        <a href="https://www.fda.gov/media/101468/download">&rArr;</a>
+    </div>
+</div>
+<p>
+Roumiguié M, Kamat AM, Bivalacqua TJ, Lerner SP, Kassouf W, Böhle A, Brausi M, Buckley R, Persad R, Colombel M, Lamm D, Palou-Redorta J, Soloway M, Brothers K, Steinberg G, Lotan Y, Sylvester R, Alfred Witjes J, Black PC. International Bladder Cancer Group Consensus Statement on Clinical Trial Design for Patients with Bacillus Calmette-Guérin-exposed High-risk Non-muscle-invasive Bladder Cancer. Eur Urol. 2021 Dec 23:S0302-2838(21)02213-2
+
+</p><p>
+
+Matulay JT, Soloway M, Witjes JA, Buckley R, Persad R, Lamm DL, Boehle A, Palou J, Colombel M, Brausi M, Kamat AM. Risk-adapted management of low-grade bladder tumours: recommendations from the International Bladder Cancer Group (IBCG). BJU Int. 2020; 125:497-505.
+
+</p><p>
+
+Mostafid H, Babjuk M, Bochner B, Lerner SP, Witjes F, Palou J, Roupret M, Shariat S, Gontero P, van Rhijn B, Zigeuner R, Sylvester R, Comperat E, Burger M, Malavaud B, Soloway M, Williams S, Black P, Daneshmand S, Steinberg G, Brausi M, Catto J, Kamat AM. Transurethral Resection of Bladder Tumour: The Neglected Procedure in the Technology Race in Bladder Cancer. Eur Urol. 2020 Jun;77(6):669-670.
+
+</p><p>
+
+Kamat AM, Colombel M, Sundi D, Lamm D, Boehle A, Brausi M, Buckley R, Persad R, Palou J, Soloway M, Witjes JA. BCG-unresponsive non-muscle-invasive bladder cancer: recommendations from the IBCG. Nat Rev Urol. 2017; 14:244-255.
+
+</p><p>
+
+Kamat AM, Sylvester RJ, Böhle A, Palou J, Lamm DL, Brausi M, Soloway M, Persad R, Buckley R, Colombel M, Witjes JA. Definitions, end points, and clinical trial designs for non-muscle-invasive bladder cancer: recommendations from the International Bladder Cancer Group. J Clin Oncol. 2016;34:1935-44
+
+</p><p>
+
+Kamat AM, Witjes JA, Brausi M, Soloway M, Lamm D, Persad R, Buckley R, Böhle A, Colombel M, Palou J. Defining and treating the spectrum of intermediate risk nonmuscle invasive bladder cancer. J Urol 2014;192:305-15.
+
+</p><p>
+
+Lamm D, Persad R, Brausi M, Buckley R, Witjes JA, Palou J, Böhle A, Kamat AM, Colombel M, Soloway M. Defining progression in non-muscle invasive bladder cancer: it is time for a new, standard definition. J Urol 2014;191:20-7.
+
+</p><p>
+
+Witjes JA, Palou J, Soloway M, Lamm D, Kamat AM, Brausi M, Persad R, Buckley R, Colombel M, Böhle A. Current clinical practice gaps in the treatment of intermediate- and high-risk non-muscle-invasive bladder cancer (NMIBC) with emphasis on the use of bacillus Calmette-Guérin (BCG): results of an international individual patient data survey (IPDS). BJU Int 2013;112:742-50.
+
+</p><p>
+
+Brausi M, Witjes JA, Lamm D, Persad R, Palou J, Colombel M, Buckley R, Soloway M, Akaza H, Böhle A. A review of current guidelines and best practice recommendations for the management of nonmuscle invasive bladder cancer by the International Bladder Cancer Group. J Urol 2011;186:2158-67.
+
+</p><p>
+
+Lamm D, Persad R, Colombel M, Brausi M. Maintenance bacillus Calmette-Guérin: the standard of care for the prophylaxis and management of intermediate- and high-risk non-muscle invasive bladder cancer. Eur Urol Suppl 2010;9:715-34.
+
+</p><p>
+
+Colombel M, Soloway M, Akaza H, Böhle A, Palou J, Buckley R, Lamm D, Brausi M, Witjes JA, Persad R. Epidemiology, staging, grading and risk stratification of bladder cancer. Eur Urol Suppl 2008;7:618-26.
+
+</p><p>
+
+Palou J, Böhle A, Witjes JA, Colombel M, Brausi M, Lamm D, Persad R, Buckley R, Akaza H, Soloway M. Diagnosis of non-muscle invasive bladder cancer. Eur Urol Suppl 2008;7:627-36.
+
+</p><p>
+
+Persad R, Lamm D, Brausi M, Soloway M, Palou J, Böhle A, Colombel M, Akaza H, Buckley R, Witjes JA. Current approaches to the management of non-muscle invasive bladder cancer: comparison of current guidelines and recommendations. Eur Urol Suppl 2008;7:637-50.
+
+</p><p>
+
+Lamm D, Colombel M, Persad R, Soloway M, Böhle A, Palou J, Witjes JA, Akaza H, Buckley R, Brausi M. Clinical practice recommendations for the management of non-muscle invasive bladder cancer. Eur Urol Suppl 2008;7:651-66.
+
+</p><p>
+
+Witjes JA, Palou J, Soloway M, Lamm D, Brausi M, Spermon JR, Persad R, Buckley R, Akaza H, Colombel M, Böhle A. Clinical practice recommendations for the prevention and management of intravesical therapy-associated adverse events. Eur Urol Suppl 2008;7:667-74.
+
+</p>
+
+            </div>
+        </div>
+    </body>
+
+</html>

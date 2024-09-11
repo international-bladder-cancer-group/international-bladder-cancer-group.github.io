@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <title>Home - IBCG</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+            <a href="/collaborations/">Collaborations</a>
+            <a href="/events/">Events</a>
+            <a href="/library/">Library</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div id="main-pane">
+            
+            <div id="content-head">
+                
+<div class="image-head">
+    <h2>International Bladder Cancer Group</h2>
+    <h1>Mission Statement</h1>
+</div>
+
+            </div>
+            
+            <div id="content-main">
+                
+
+<p>
+The International Bladder Cancer Group (IBCG) is a globally recognized entity that has published numerous peer-reviewed articles addressing knowledge gaps in - and providing recommendations for - the management of bladder cancer.
+</p><p>
+The IBCG was formed with a primary objective being to address global educational needs and learning gaps in order to improve the care and management of patients with urothelial carcinoma. The inaugural meeting, in 2006, consisted of members selected as representatives of their varied geographic regions across Europe, North America and Asia. The members were specifically selected not only for their expertise but also to ensure representation from across the globe.
+</p><p>
+Over the years, the <b>mission</b> of the IBCG has been to improve outcomes of patients suffering from bladder cancer through critical evaluation and leveraging of existing data to drive evidence-based treatment. An additional goal is to develop practical educational tools that are applicable to the global urological community and thus enhance the care of patients with bladder cancer on a global level.
+</p><p>
+Toward this end, the IBCG has authored numerous peer-reviewed articles published in high-impact journals, including <i>European Urology</i>, <i>Journal of Urology</i>, <i>BJU International</i>, and <i>Journal of Clinical Oncology</i>. An IBCG review of guidelines and best practice recommendations for the management of non-muscle-invasive bladder cancer published in <i>Journal of Urology</i> in 2011 remains one of the most-downloaded articles for that journal. The IBCG’s white paper published in <i>Journal of Clinical Oncology</i>, “<a class="orange-underline" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5321095/pdf/JCO644070.pdf">Definitions, End Points, and Clinical Trial Designs for Non-Muscle-Invasive Bladder Cancer</a>,” is being used by regulatory bodies as well as industry as a guide for development of clinical trials. In late 2021, the IBCG published its “<span class="orange-underline">Consensus Statement on Clinical Trial Design for Patients with BCG Exposed High-risk Non-Muscle-Invasive Bladder Cancer</span>”  in <i>European Urology</i> to serves as a guide for this emerging space in the non-muscle-invasive bladder cancer spectrum. Recently, in 2023, the IBCG in partnership with the <a class="orange-underline" href="https://www.sitcancer.org/home">Society for Immunotherapy of Cancer (SITC)</a> released a definitive white paper guidance document for clinical trial design in all stages (muscle-invasive, metastatic and non-muscle invasive) of bladder cancer published in <i>Journal of Clinical Oncology</i>, “<a href="https://ascopubs.org/doi/pdf/10.1200/JCO.23.00307" class="orange-underline">Definitions, End Points, and Clinical Trial Designs for Bladder Cancer: Recommendations From the Society for Immunotherapy of Cancer and the International Bladder Cancer Group</a>.” The IBCG has been quoted in global and international guidelines from the American Urological Association and European Urological Association.
+</p><p>
+
+The IBCG has expanded its membership in the past few years to include many globally recognized experts in the field of bladder cancer. This expansion has included a wide range of health care professionals including medical oncologists, radiation oncologists, statisticians and researchers with representation to include all the continents. In 2021, the IBCG created a Health Services Research group led by Dr. Stephen B Williams which aims to be the collaborative source for clinicians and researchers. An IBCG newsletter under Chief Editor Dr. Fred Witjes was launched in Q1 2022.
+</p><p>
+In August 2023, the IBCG held a retreat (<span style="background-color: lightgreen">#IBCG23</span>) to discuss 2 very important topics: 
+</p>
+
+<ol style="margin-top: 0">
+    <li>Unresponsive Disease: Recommendations for Optimal Sequencing/Patient Selection</li>
+
+    <li>Bladder Conservation in MIBC: Recommendations for TMT, Partial Cystectomy, Observation Post NAC/IO, etc.</li>
+</ol>
+<p>
+This retreat led by our program chairs, Drs. Shilpa Gupta, Roger Li, and Patrick Hensley opened its doors to a wider audience with partners from industry invited to join the KOLs and patient advocates, and resulted in robust discussions directed towards improving care for our patients.
+
+</p><p>
+Other activities include: AUA - IBCG Bladder Cancer Forum - held in 2022 and 2023; IBCG collaboration with Chilean Society to develop Chilean Bladder Cancer Guidelines; Collaborative effort between GSRGT and IBCG to tackle variant histology/histologic subtypes in bladder cancer.
+</p><p> 
+
+The IBCG will continue to support ongoing initiatives including clinical trial design, clinical research, national and international guideline assistance, and conference or symposium organization.
+</p><p>
+
+These initiatives and projects will help continue the IBCG mission which will always remain: <b><i>to improve outcomes of patients suffering from bladder cancer through critical evaluation and leveraging of existing data to drive evidence-based treatment.</i></b>
+
+</p>
+
+            </div>
+        </div>
+    </body>
+
+</html>

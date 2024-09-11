@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% import 'modules/eventcard.html' as eventcard %}
+
+{% block c_title %}Events{% endblock %}
+
+{% block c_main %}
+
+<h1>Upcoming</h1>
+{% for event in events.future %}
+{{ eventcard.eventcard(event.title, event.summary, event.dates, event.link) }}
+{% endfor %}
+
+<h1>Past</h1>
+{% for event in events.past %}
+{{ eventcard.eventcard(event.title, event.summary, event.dates, event.link) }}
+{% endfor %}
+
+{% endblock %}
+

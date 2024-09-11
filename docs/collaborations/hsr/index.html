@@ -1,0 +1,358 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <title>HSR - IBCG</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+            <a href="/collaborations/">Collaborations</a>
+            <a href="/events/">Events</a>
+            <a href="/library/">Library</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div id="main-pane">
+            
+            <div id="content-head">
+                
+<div class="image-head">
+    <h2>International Bladder Cancer Group</h2>
+    <h1>Health Service Research</h1>
+</div>
+
+            </div>
+            
+            <div id="content-main">
+                
+
+<p>
+
+Lead by Drs. Stephen B. Williams & Yair Lotan, the Health Services Research (HSR) arm of the IBCG aims to be THE collaborative source for global clinicians and researchers, to improve population health of bladder cancer patients at large.
+
+</p>
+
+
+    
+    <div class="card" id="49">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/049.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Stephen B. Williams</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>The Robert Earl Cone Professor (Tenured), Chief - Division of Urology, Director of Urologic Oncology, Director of Urologic Research, Co-Director of the Surgical Outcomes Research Division; The University of Texas Medical Branch</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="19">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/019.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Yair Lotan</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor, Chief of Urologic Oncology, Jane and John Justin Distinguished Chair in Urology (In Honor of Claus G. Roehrborn, MD); UT Southwestern Medical Center at Dallas, Department of Urology</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="4">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/004.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Sarah Psutka</p>
+                <p class="person-title">MD MS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology, Associate Program Director, Associate Editor - EU; University of Washington, Seattle, WA</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="21">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/021.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Sima Porten</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology; UCSF, San Francisco, CA</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="26">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/026.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Shahrokh F. Shariat</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor and Chairman; Department of Urology, Comprehensive Cancer Center, Medical University Vienna, Vienna General Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="20">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/020.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Sia Daneshmand</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology (Clinical Scholar), Director of Urologic Oncology, Director of Clinical Research, Urologic Oncology Fellowship Director; USC/Norris Comprehensive Cancer Center, Institute of Urology</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="42">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/042.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Angela B. Smith</p>
+                <p class="person-title">MD MS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Vice Chair of Academic Affairs, Associate Professor and Director - Urologic Oncology; University of North Carolina</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="1">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/001.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Petros Grivas</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor, Clinical Director of GU cancers program; University of Washington, Fred Hutchinson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="55">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/055.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Hugh Mostafid</p>
+                <p class="person-title">MSc FRCS FEBU</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Nuffield Health, London, UK</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="79">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/079.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Patrick Hensley</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Director of Membership Services; IBCG</li>
+                
+                    <li>Assistant Professor; University of Kentucky, Lexington, KY</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="92">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/092.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Niyati Lobo</p>
+                <p class="person-title">MBBS FRCS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Consultant Urological Surgeon; Cambridge University Hospitals NHS Foundation Trust</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="27">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/027.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Shilpa Gupta</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Scientific Board Member; IBCG</li>
+                
+                    <li>Professor and Staff; Department of Medical Urology, Cleveland Clinic</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+            </div>
+        </div>
+    </body>
+
+</html>

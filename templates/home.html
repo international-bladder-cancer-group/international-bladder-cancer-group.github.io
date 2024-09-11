@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% import 'modules/card.html' as card %}
+{% import 'modules/eventcard.html' as eventcard %}
+
+{% block c_title %}Home{% endblock %}
+
+{% block c_head %}
+<div class="image-head" id="home-head">
+    <h2>We are the</h2>
+    <h1>International Bladder Cancer Group</h1>
+</div>
+{% endblock %}
+
+{% block c_main %}
+
+<div class="mosaic">
+    <div class="tile">
+        {{ card.card("Mission Statement", mission_summary, "/mission") }}
+    </div>
+    <div class="tile">
+        <div class="link-card">
+            <p class="card-title">Newsletter</p>
+            <div class="card-link">
+                <a href="/library/newsletter">&rArr;</a>
+            </div>
+        </div>
+        <div class="link-card">
+            <p class="card-title">Become a member</p>
+            <div class="card-link">
+                <a href="/contact">&rArr;</a>
+            </div>
+        </div>
+    </div>
+    <div class="tile">
+        <p class="tile-title">Concluded</p>
+        {{ eventcard.eventcard(last_event.title, last_event.summary, last_event.dates, last_event.link) }}
+    </div>
+    <div class="tile">
+        <p class="tile-title">Upcoming</p>
+        {{ eventcard.eventcard(next_event.title, next_event.summary, next_event.dates, next_event.link) }}
+    </div>
+
+    <div class="tile" style="max-height: 24rem; overflow-x: hidden; overflow-y: scroll">
+        <a class="twitter-timeline" href="https://twitter.com/IBCG_BladderCA?ref_src=twsrc%5Etfw"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+</div>
+
+{% endblock %}
+

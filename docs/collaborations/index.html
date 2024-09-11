@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <title>Collaborations - IBCG</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+            <a href="/collaborations/">Collaborations</a>
+            <a href="/events/">Events</a>
+            <a href="/library/">Library</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div id="main-pane">
+            
+            <div id="content-main">
+                
+
+
+    <div class="card">
+    <p class="card-title">Global Society for Rare GU Tumors</p>
+    <p class="card-info">In 2021, the International Bladder Cancer Group (IBCG) and Global Society of Rare GU Tumors (GSRGT) launched a joint committee on rare variants of bladder cancer. Bladder cancer is a significant global health issue, and the incidence of rare variants is increasing. This committee brings together stakeholders from both organizations to collaborate on research, education, and clinical trial endpoints with a focus on rare bladder cancer histologic subtypes and genetic variants.</p>
+    
+        <div class="card-link">
+            <a href=gsrgt>View&nbsp;more&nbsp;&rArr;</a>
+        </div>
+    
+</div>
+
+    <div class="card">
+    <p class="card-title">Health Service Research</p>
+    <p class="card-info">Lead by Drs. Stephen B. Williams & Yair Lotan, the Health Services Research (HSR) arm of the IBCG aims to be THE collaborative source for global clinicians and researchers, to improve population health of bladder cancer patients at large.</p>
+    
+        <div class="card-link">
+            <a href=hsr>View&nbsp;more&nbsp;&rArr;</a>
+        </div>
+    
+</div>
+
+    <div class="card">
+    <p class="card-title">UroToday Partnership</p>
+    <p class="card-info">The International Bladder Cancer Group (IBCG) and UroToday, a leading global resource for urology news and education, are proud to announce our formal partnership to collaborate on improving patient outreach and education on bladder cancer. This partnership will leverage the strengths of both organizations to provide patients with access to the latest information and resources about bladder cancer.</p>
+    
+        <div class="card-link">
+            <a href=urotoday>View&nbsp;more&nbsp;&rArr;</a>
+        </div>
+    
+</div>
+
+
+<div class="link-card">
+    <p class="card-title">BCAN (Bladder Cancer Advocacy Network)</p>
+    <div class="card-link">
+        <a href="https://bcan.org">&rArr;</a>
+    </div>
+</div>
+
+<div class="link-card">
+    <p class="card-title">World Bladder Cancer Patient Coalition</p>
+    <div class="card-link">
+        <a href="https://worldbladdercancer.org/news_events/expert-discuss-findings-from-global-bladder-cancer-patient-carer-survey/">&rArr;</a>
+    </div>
+</div>
+
+
+
+            </div>
+        </div>
+    </body>
+
+</html>

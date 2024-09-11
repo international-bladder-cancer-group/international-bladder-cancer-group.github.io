@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% import 'modules/card.html' as card %}
+
+{% block c_title %}Collaborations{% endblock %}
+
+{% block c_main %}
+
+{% for collaboration in collaborations %}
+    {{ card.card(collaboration.title, collaboration.summary, collaboration.link) }}
+{% endfor %}
+
+<div class="link-card">
+    <p class="card-title">BCAN (Bladder Cancer Advocacy Network)</p>
+    <div class="card-link">
+        <a href="https://bcan.org">&rArr;</a>
+    </div>
+</div>
+
+<div class="link-card">
+    <p class="card-title">World Bladder Cancer Patient Coalition</p>
+    <div class="card-link">
+        <a href="https://worldbladdercancer.org/news_events/expert-discuss-findings-from-global-bladder-cancer-patient-carer-survey/">&rArr;</a>
+    </div>
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <title>Links - IBCG</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+            <a href="/collaborations/">Collaborations</a>
+            <a href="/events/">Events</a>
+            <a href="/library/">Library</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div id="main-pane">
+            
+            <div id="content-main">
+                
+
+<div class="link-card">
+    <p class="card-title">European Urology Oncology</p>
+    <div class="card-link">
+        <a href="https://euoncology.europeanurology.com/">&rArr;</a>
+    </div>
+</div>
+
+<div class="link-card">
+    <p class="card-title">Bladder Cancer Advocacy Network</p>
+    <div class="card-link">
+        <a href="https://bcan.org">&rArr;</a>
+    </div>
+</div>
+
+<div class="link-card">
+    <p class="card-title">UroToday Bladder Cancer Center of Excellence</p>
+    <div class="card-link">
+        <a href="https://www.urotoday.com/center-of-excellence/bladder-cancer.html">&rArr;</a>
+    </div>
+</div>
+
+
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% import 'modules/personcard.html' as personcard %}
+
+{% block c_title %}HSR{% endblock %}
+
+{% block c_head %}
+<div class="image-head">
+    <h2>International Bladder Cancer Group</h2>
+    <h1>{% block c_preview_title %}Health Service Research{% endblock %}</h1>
+</div>
+{% endblock %}
+
+{% block c_main %}
+
+<p>
+{% block c_preview_summary %}
+Lead by Drs. Stephen B. Williams & Yair Lotan, the Health Services Research (HSR) arm of the IBCG aims to be THE collaborative source for global clinicians and researchers, to improve population health of bladder cancer patients at large.
+{% endblock %}
+</p>
+
+{% for id in [
+    49,
+    19,
+    4,
+    21,
+    26,
+    20,
+    42,
+    1,
+    55,
+    79,
+    92,
+    27
+    ] %}
+    {% set p = people[id] %}
+    {{ personcard.personcard(p.id, p.name, p.title, p.positions, p.image_url) }}
+{% endfor %}
+
+
+
+{% endblock %}
+

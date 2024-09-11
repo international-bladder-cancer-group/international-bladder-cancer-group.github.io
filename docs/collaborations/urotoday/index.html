@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <title>UroToday - IBCG</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+            <a href="/collaborations/">Collaborations</a>
+            <a href="/events/">Events</a>
+            <a href="/library/">Library</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div id="main-pane">
+            
+            <div id="content-head">
+                
+<div class="image-head">
+    <h2>International Bladder Cancer Group</h2>
+    <h1>UroToday Partnership</h1>
+</div>
+
+            </div>
+            
+            <div id="content-main">
+                
+
+<p>Digital Science Press / UroToday</p>
+
+<p>RENO, Nev., Nov. 27, 2023</p>
+
+<p>
+
+The International Bladder Cancer Group (IBCG) and UroToday, a leading global resource for urology news and education, are proud to announce our formal partnership to collaborate on improving patient outreach and education on bladder cancer. This partnership will leverage the strengths of both organizations to provide patients with access to the latest information and resources about bladder cancer.
+
+</p>
+
+<p>
+The IBCG is a globally recognized organization dedicated to improving the care of patients with bladder cancer through critical evaluation and leveraging of existing data to drive evidence-based treatment. UroToday is a leading provider of urology news and education, reaching over 500,000 urologists and healthcare professionals worldwide.
+
+</p><p>
+
+Our two organizations have a decades-long history of collaboration, having worked together on numerous projects in the past. These projects have included the development of educational materials and the publication of peer-reviewed articles.
+
+</p><p>
+
+Our formal partnership will expand upon these existing efforts and will focus on the following key areas:
+
+</p>
+
+<ul style="margin-top: 0">
+    <li>Developing and disseminating educational materials for patients about bladder cancer</li>
+
+    <li>Increasing patient awareness of clinical trials and other research opportunities</li>
+
+    <li>Advocating for patients at the national and international levels</li>
+</ul>
+
+<p>
+
+    "We are excited to formalize our partnership with UroToday," says <span style="color: orange">Dr. Ashish M. Kamat, MD, MBBS, President of IBCG</span>. "This partnership will allow us to reach a wider audience of patients and provide them with the information they need to make informed decisions about their care."
+
+</p><p>
+
+    "We have enjoyed a long relationship of covering the work of the IBCG," says <span style="color: orange">Gina Carithers, CEO of UroToday</span>. "We share the IBCG's commitment to improving the care of patients with bladder cancer, and we believe that this partnership has the potential to make a real difference in the lives of patients."
+
+</p><p>
+
+Our partnership with the IBCG is a significant step forward in the fight against bladder cancer. By working together, we are hopeful that our two organizations can help to improve the care and outcomes for patients with bladder cancer.
+
+</p><p>
+
+About the International Bladder Cancer Group (IBCG):
+The IBCG is a globally recognized organization dedicated to improving the care of patients with bladder cancer. The IBCG was formed in 2006 with a primary objective being to address global educational needs and learning gaps in order to improve the care and management of patients with urothelial carcinoma. The IBCG has authored numerous peer-reviewed articles published in high-impact journals, and its guidelines and best practice recommendations are used by clinicians around the world.
+
+</p><p>
+
+    About UroToday: <br/>
+UroToday is a leading global resource for urology news and education. UroToday reaches over 500,000 urologists and healthcare professionals worldwide and provides them with access to the latest news, research, and clinical practice guidelines. UroToday is also a leading provider of patient education, and its website is visited by over 1 million patients and caregivers each year.
+
+</p><p>
+    Learn more about UroToday here: <a href="https://www.urotoday.com">https://www.urotoday.com</a>
+
+</p><p>
+    Bladder Cancer Center of Excellence: <a href="https://www.urotoday.com/center-of-excellence/bladder-cancer.html">https://www.urotoday.com/center-of-excellence/bladder-cancer.html</a>
+
+</p><p>
+SOURCE Digital Science Press
+</p><p>
+
+For further information: Digital Science Press / UroToday, Gina Carithers, gcarithers@urotoday.com
+</p>
+
+
+            </div>
+        </div>
+    </body>
+
+</html>

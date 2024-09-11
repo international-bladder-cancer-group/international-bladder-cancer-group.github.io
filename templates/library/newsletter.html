@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block c_title %}{% block c_preview_title %}Newsletter{% endblock %}{% endblock %}
+
+{% block c_preview_summary %}
+Selected articles curated by the IBCG Editorial Team covering all things related to bladder cancer. Editorial Team: Dr. Fred Witjes (EIC), Dr. Sima Porten, Dr. Petros Grivas, Dr. Roger Li, Dr. Patrick Hensley
+{% endblock %}
+
+{% block c_main %}
+
+<h1>Newsletter</h1>
+
+    <script>
+        function loadIssue(selection) {
+            $('#viewer').attr('data', selection.value);
+            $('#viewer a:first').attr('href', selection.value);
+        }
+    </script>
+
+<select name="issue" class="dropdown" onchange="loadIssue(this);">
+    {% for issue in issues %}
+    <option value="{{ issue.file }}">{{ issue.title }}</option>
+    {% endfor %}
+</select>
+
+<object id="viewer" data="{{ issues[0].file }}" type="application/pdf">
+    <a href="{{ issues[0].file }}">View selected issue as PDF</a>
+</object>
+
+{% endblock %}
+

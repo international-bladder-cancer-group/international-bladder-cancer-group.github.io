@@ -1,0 +1,17 @@
+{% macro eventcard(title, info, dates, link) -%}
+<div class="card">
+    <div class="card-header">
+        <p class="card-title">{{ title | safe }}</p>
+        <p class="card-subtitle">{{ dates | safe }}</p>
+    </div>
+    {% if info != "" %}
+        <p class="card-info">{{ info | safe }}</p>
+    {% endif %}
+    {% if link != "" %}
+        <div class="card-link">
+            <a href={{ link | safe }}>View&nbsp;more&nbsp;&rArr;</a>
+        </div>
+    {% endif %}
+</div>
+{%- endmacro %}
+

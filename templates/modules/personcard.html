@@ -1,0 +1,23 @@
+{% macro personcard(id, name, title, positions, image_url) -%}
+<div class="card" id="{{ id }}">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="{{ image_url }}"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">{{ name }}</p>
+                <p class="person-title">{{ title }}</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                {% for position in positions %}
+                    <li>{{ position }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+

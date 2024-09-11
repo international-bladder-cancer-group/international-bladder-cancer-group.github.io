@@ -1,0 +1,2539 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <title>Members - IBCG</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+            <a href="/collaborations/">Collaborations</a>
+            <a href="/events/">Events</a>
+            <a href="/library/">Library</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div id="main-pane">
+            
+            <div id="content-main">
+                
+
+    <script>
+        var member_lists = {
+            editorial_board: [
+                0,
+                1,
+                21,
+                50,
+                79
+            ],
+            board_members: [
+                14,
+                52,
+                86,
+                50,
+                27,
+                79,
+                91
+            ],
+            founding_members: [
+                14,
+                52,
+                0,
+                56,
+                43,
+                87,
+                57,
+                88,
+                89,
+                90
+            ],
+            core_committee: [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                87,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+
+                // prem
+                86
+            ]
+        };
+
+        $(function () {
+            $("select#member-list-changer").change();
+        });
+
+        function loadMembers(selection) {
+            $('.card').addClass('gone');
+            var member_ids = member_lists[selection.value];
+            member_ids.forEach((i) => $('#' + i).removeClass('gone'));
+
+            var member_cards = $('.card')
+            member_cards.sort(function(a, b) {
+                return member_ids.indexOf(parseInt($(a).attr('id'))) - member_ids.indexOf(parseInt($(b).attr('id')))
+            });
+            $('#members-display').html(member_cards);
+        }
+
+    </script>
+
+    <select id="member-list-changer" name="member-list" class="dropdown" onchange="loadMembers(this);">
+        <option value="core_committee">Core Committee</option>
+        <option value="founding_members">Founding Members</option>
+        <option value="board_members">Board Members</option>
+        <option value="editorial_board">Editorial Board</option>
+    </select>
+
+
+    <div id="members-display">
+
+    <div class="card" id="0">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/000.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">J Alfred Witjes</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Secretary; IBCG</li>
+                
+                    <li>Professor in Oncological Urology; Radboud University, Netherlands</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="1">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/001.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Petros Grivas</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor, Clinical Director of GU cancers program; University of Washington, Fred Hutchinson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="2">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/002.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Laura Mertens</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Oncologic Urologist; Netherlands Cancer Institute, Amsterdam</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="3">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/003.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Seth Lerner</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor: Urology, Beth and Dave Swalm Chair in Urologic Oncology, Director of Urologic Oncology, Director of the Multidisciplinary Bladder Cancer Program; Baylor College of Medicine, Houston, TX, US</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="4">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/004.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Sarah Psutka</p>
+                <p class="person-title">MD MS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology, Associate Program Director, Associate Editor - EU; University of Washington, Seattle, WA</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="5">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/005.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Neal D. Shore</p>
+                <p class="person-title">MD FACS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Medical Director, CPI; Carolina Urologic Research Center</li>
+                
+                    <li>Founding Director; CUSP Clinical Research Consortium</li>
+                
+                    <li>National Urology Research Director; 21st Century Oncology</li>
+                
+                    <li>Immediate Past President; LUGPA</li>
+                
+                    <li>Atlantic Urology Clinics, Myrtle Beach, SC</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="6">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/006.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Andrea Necchi</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor; Vita-Salute San Raffaele University</li>
+                
+                    <li>Head of Genitourinary Medical Oncology; IRCCS San Raffaele Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="7">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/007.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">David McConkey</p>
+                <p class="person-title">PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Director, Professor of Urology; Johns Hopkins, Baltimore, MD</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="8">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/008.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">M. Carmen Mir</p>
+                <p class="person-title">MD PhD FBU</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>University Hospitals La Ribera, Valencia, Spain</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="9">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/009.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">John Taylor</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor and Director of Urologic Research, President of AIBBCR; University of Kansas Medical Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="10">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/010.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Matthew D. Galsky</p>
+                <p class="person-title">MD FASCO</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Director, GU Medical Oncology, Professor of Medicine; Icahn School of Medicine</li>
+                
+                    <li>Associate Director Translational Research, Co Leader Cancer Clinical Research; Mount Sinai, NY</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="11">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/011.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Gary D Steinberg</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor and Director; Perlmutter Cancer Center, NYU Langone Health</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="12">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/012.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Arnulf Stenzl</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor and Chairman; Department of Urology, Tuebingen, Germany</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="13">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/013.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Peter Black</p>
+                <p class="person-title">MD FACS FRCSC</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Khosrowshahi Family Chair, Professor; Dept of Urologic Sciences, University of British Columbia</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="14">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/014.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Ashish M. Kamat</p>
+                <p class="person-title">MD MBBS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>President and Founder; IBCG</li>
+                
+                    <li>Professor of Urologic Oncology (Surgery) and Cancer Research; MD Anderson Cancer Center, Houston, TX</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="15">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/015.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Janet Elyse Baack Kukreja</p>
+                <p class="person-title">MD MPH FACS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor, Urologic Oncologist; University of Colorado Anschutz Medical Campus</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="16">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/016.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Marko Babjuk</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Prof. and Chairman; Dept of Urology, Teaching Hospital Motol</li>
+                
+                    <li>2nd Faculty of Medicine; Charles Universtity, Prague, Czech Republic</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="17">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/017.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Wassim Kassouf</p>
+                <p class="person-title">MD CM FRCSC</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Stephen Jarislowsky Chair in Urology, Professor and Associate Chair; Dept. of Surgery, McGill University</li>
+                
+                    <li>Head, Urologic Oncology; McGill University Health Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="18">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/018.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Philippe Spiess</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="19">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/019.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Yair Lotan</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor, Chief of Urologic Oncology, Jane and John Justin Distinguished Chair in Urology (In Honor of Claus G. Roehrborn, MD); UT Southwestern Medical Center at Dallas, Department of Urology</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="20">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/020.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Sia Daneshmand</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology (Clinical Scholar), Director of Urologic Oncology, Director of Clinical Research, Urologic Oncology Fellowship Director; USC/Norris Comprehensive Cancer Center, Institute of Urology</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="21">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/021.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Sima Porten</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology; UCSF, San Francisco, CA</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="22">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/022.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Trinity Bivalacqua</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Director of Urologic Oncology, Associate Professor of Urology; Johns Hopkins</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="23">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/023.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Morgan Roupret</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professeur; Hôpital Pitié-Salpétrière, APHP Sorbonne Université, France</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="24">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/024.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Bogdana Schmidt</p>
+                <p class="person-title">MD MPH</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="25">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/025.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Kamal Pohar</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor; Ohio State</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="26">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/026.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Shahrokh F. Shariat</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor and Chairman; Department of Urology, Comprehensive Cancer Center, Medical University Vienna, Vienna General Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="27">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/027.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Shilpa Gupta</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Scientific Board Member; IBCG</li>
+                
+                    <li>Professor and Staff; Department of Medical Urology, Cleveland Clinic</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="28">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/028.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Noah Hahn</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Urologic Oncology, Director of Bladder Research; Johns Hopkins, Baltimore, MD</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="29">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/029.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Alison Birtle</p>
+                <p class="person-title">FRCP FRCR MD DipLCM</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Honorary Clinical Professor &amp; Consultant Oncologist; Rosemere Cancer Centre, Royal Preston Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="30">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/030.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">James Catto</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>NIHR Research Professor, Professor of Urologic Surgery; University of Sheffield, UK</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="31">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/031.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Arlene Siefker-Radtke</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor, Department of GU Medical Oncology; MD Anderson Cancer Center, Houston, TX</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="32">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/032.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Eva Comperat</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor, Chief; L&#39;Assistance Publique-Hôpitaux de Paris, Hôpital Tenon, Paris, France</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="33">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/033.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Karima Oualla</p>
+                <p class="person-title">MD MSc</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="34">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/034.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Gottfrid Sjödahl</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Researcher; Lund University Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="35">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/035.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Jason A. Efstathiou</p>
+                <p class="person-title">MD DPhil FASTRO FACRO</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor; Harvard Medical School</li>
+                
+                    <li>Director; Genitourinary (GU) Division, Department of Radiation Oncology</li>
+                
+                    <li>Co-Director; Bertucci Center for GU Cancers, Massachusetts General Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="36">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/036.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Bishoy M. Faltas</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Gellert Family-John P. Leonard MD Research Scholar, Medicine; Weill Cornell Medical College</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="37">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/037.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Mike Cookson</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor and Chairman; Department of Urology, Stephenson Cancer Center, University of Oklahoma College of Medicine</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="38">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/038.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Mario Fernandez</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor; Department of Urology and Center of Genetics and Genomics</li>
+                
+                    <li>Faculty of Medicine, Clínica Alemana Universidad del Desarrollo, Santiago, Chile</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="39">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/039.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Amir Horowitz</p>
+                <p class="person-title">PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Principal Investigator, Assistant Professor of Oncological Sciences; Precision Immunology Institute/Tisch Cancer Institute</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="40">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/040.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Ananya Choudhury</p>
+                <p class="person-title">MB BChir MA PhD MRCP FRCR</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Cancer Research UK Manchester Centre, The University of Manchester</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="41">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/041.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Marco Moschini</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Assistant Professor of Urology; Ospedale San Raffaele, Milano</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="42">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/042.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Angela B. Smith</p>
+                <p class="person-title">MD MS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Vice Chair of Academic Affairs, Associate Professor and Director - Urologic Oncology; University of North Carolina</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="43">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/043.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Joan Palou</p>
+                <p class="person-title">MD PhD FEBU FRCS (Glasg)</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Chairman of Urology, Chairman of European School of Urology, Professor; Universitat Autònoma de Barcelona Fundació Puigvert, Barcelona, Spain</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="44">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/044.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Laura Bukavina</p>
+                <p class="person-title">MD MPH MSc</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>University Hospitals Cleveland Medical Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="45">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/045.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Makarand Khochikar</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Chief Urologist; Siddhi Vinayak Ganapati Cancer Hospital, Miraj (India)</li>
+                
+                    <li>Past President; Urological Society of India - West Zone</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="46">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/046.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Paolo Gontero</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Urology; University of Torino School of Medicine</li>
+                
+                    <li>Chairman; Urology Department, Molinette Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="47">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/047.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Rajeev Kumar</p>
+                <p class="person-title">MCh</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Urology, Associate Dean-Academics; All India Institute of Medical Sciences, New Delhi, India</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="48">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/048.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Charles C. Guo</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor, Department of Pathology; University of Texas MD Anderson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="49">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/049.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Stephen B. Williams</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>The Robert Earl Cone Professor (Tenured), Chief - Division of Urology, Director of Urologic Oncology, Director of Urologic Research, Co-Director of the Surgical Outcomes Research Division; The University of Texas Medical Branch</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="50">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/050.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Roger Li</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Scientific Board Member; IBCG</li>
+                
+                    <li>Assistant Member; Department of Genitourinary Oncology, H. Lee Moffitt Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="51">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/051.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Badrinath Konety</p>
+                <p class="person-title">MD MBA</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>President; Allina Health Cancer Institute</li>
+                
+                    <li>Elizabeth and Eugene Leonard Chair, Chief System Research Officer, Professor; Dept of Urology, Rush Medical College</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="52">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/052.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Roger Buckley</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Secretary and Co-Founder; IBCG</li>
+                
+                    <li>Chief of Urology; North York General Hospital, Toronto, Canada</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="53">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/053.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Michael O&#39;Donnell</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Richard D Williams Professor &amp; Director of Urology Oncology; University of Iowa Carver College of Medicine</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="54">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/054.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Param Mariappan</p>
+                <p class="person-title">FRCS(Urol) PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Honorary Professor &amp; Consultant Urological Surgeon, Director; Edinburgh Bladder Cancer Surgery (EBCS), The University of Edinburgh, Western General Hospital, Edinburgh, UK</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="55">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/055.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Hugh Mostafid</p>
+                <p class="person-title">MSc FRCS FEBU</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Nuffield Health, London, UK</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="56">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/056.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Donald Lamm</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>President; BCG Oncology, PC</li>
+                
+                    <li>Clinical Professor; University of Arizona, Phoenix, Arizona, US</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="57">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/057.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Mark Soloway</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Chief - Urologic Oncology; Memorial Hospital</li>
+                
+                    <li>Former Chairman; Department of Urology, University of Miami, Hollywood, Florida, USA</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="58">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/058.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Bernard H Bochner</p>
+                <p class="person-title">MD FACS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Sir Murray F. Brennan Chair in Surgery; Memorial Sloan Kettering Cancer Center, New York NY</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="59">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/059.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Joshua Meeks</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology, Biochemistry and Molecular Genetics; Feinberg School of Medicine, Northwestern University</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="61">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/061.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Kelly Bree</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Assistant Professor - Urology; MD Anderson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="62">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/062.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Omar Alhalabi</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Assistant Professor - Genitourinary Medical Oncology; MD Anderson Cancer Center, Texas</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="63">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/063.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Rakesh Heer</p>
+                <p class="person-title">PhD FRCS(Urol)</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Honorary Professor of Urology; Translational and Clinical Research Institute, Newcastle University</li>
+                
+                    <li>Chair of Urology; Division of Surgery, Imperial College London</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="64">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/064.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Alexandre R Zlotta</p>
+                <p class="person-title">MD PhD FRCSC</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Mount Sinai Hospital</li>
+                
+                    <li>Princess Margaret Cancer Centre, Toronto</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="65">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/065.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Madhuri Koti</p>
+                <p class="person-title">DVM MVSc PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Departments of Biomedical and Molecular Sciences and Obstetrics and Gynecology, Department of Urology, Division of Cancer Biology and Genetics, Queen’s Cancer Research Institute, Queen’s University</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="66">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/066.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Edmund Chiong</p>
+                <p class="person-title">MBBS PhD FRCSEd FRCSI FAMS (Urology)</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Head &amp; Senior Consultant, Programme Lead (Genitourinary Cancer Programme), Specialty Lead for Urology; Department of Urology, National University Hospital, National University Health System (NUHS)</li>
+                
+                    <li>Associate Professor; Department of Surgery, Yong Loo Lin School of Medicine, National University of Singapore (NUS)</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="67">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/067.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Comron Hassanzadeh</p>
+                <p class="person-title">MD MPH</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Assistant Professor of Radiation Oncology; Department of Genitourinary Radiation Oncology, The University of Texas MD Anderson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="68">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/068.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Donna Hansel</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Division Head and Professor; Division of Pathology and Laboratory Medicine, MD Anderson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="69">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/069.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Benjamin Pradere</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Senior Urologist; Department of Urology, UROSUD Croix du Sud Hospital, France</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="70">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/070.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Kent W Mouw</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Department of Radiation Oncology, Dana-Farber Cancer Institute/Brigham &amp; Women’s Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="71">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/071.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Molly Ingersoll</p>
+                <p class="person-title">PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Research Director/Directeur de Recherche; Mucosal Inflammation and Immunity Group, Institut Cochin &amp; Institut Pasteur</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="72">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/072.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Lars Dyrskjøt Andersen</p>
+                <p class="person-title">PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Molecular Medicine; Aarhus University</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="73">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/073.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Lara Harik</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="74">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/074.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Gagan Praskash</p>
+                <p class="person-title">MBBS MCh</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="75">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/075.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Jeffrey Ross</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="76">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/076.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Neema Navai</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor and Medical Director of Urology; MD Anderson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="77">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/077.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Richard Sylvester</p>
+                <p class="person-title">ScD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>EAU NMIBC Guidelines Panel, Brussels, Belgium</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="78">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/078.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Brant A. Inman</p>
+                <p class="person-title">MD MS FRCSC</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Urologic Oncology</li>
+                
+                    <li>Co-Director of the Duke Prostate and Urologic Cancer Center, Durham, NC</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="79">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/079.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Patrick Hensley</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Director of Membership Services; IBCG</li>
+                
+                    <li>Assistant Professor; University of Kentucky, Lexington, KY</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="80">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/080.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Thomas Flaig</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Vice Chancellor for Research; University of Colorado Denver, Anschutz Medical Campus</li>
+                
+                    <li>Professor and Robert Rifkin Endowed Chair; Division of Medical Oncology, CU School of Medicine</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="81">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/081.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Jeremy Teoh</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor; The Chinese University of Hong Kong</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="82">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/082.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Wei Shen Tan</p>
+                <p class="person-title">MD PhD FRCS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>MD Anderson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="83">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/083.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Vignesh Packiam</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor; Rutgers Cancer Institute of New Jersey</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="84">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/084.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Raj Satkunasivam</p>
+                <p class="person-title">MD MS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor; Miles Family Chair in Urologic Surgery, Houston Methodist Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="85">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/085.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Byron Lee</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology; UT MD Anderson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="86">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/086.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Prem Kumar</p>
+                <p class="person-title">MSc</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Treasurer; IBCG</li>
+                
+                    <li>Manager Partner; Effikas Consulting</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="87">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/087.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Maurizio Brausi</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Scientific Director; CUrE (Centro Europeo Urologia)</li>
+                
+                    <li>Chairman ESOU; Dept. of Urology Hesperia Hospital, Modena, Italy</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="88">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/088.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Marc Colombel</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Urology, Director of GU Oncology Program; Hospices Civils de Lyon, Lyon, France</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="89">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/089.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Raj Persad</p>
+                <p class="person-title">MD ChM FRCS (Eng) FRCS (Urol) FEBU</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Director of Research and Teaching; Bristol Urological Institute, North Bristol NHS Trust, Bristol, UK</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="90">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/090.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Andreas Böhle</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Urology; University of Luebeck, Luebeck, Germany</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="91">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/091.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Peter Marmo</p>
+                <p class="person-title"></p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>General Counsel; IBCG</li>
+                
+                    <li>peter@marmolawpllc.com; Marmo Law PLLC</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="92">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/092.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Niyati Lobo</p>
+                <p class="person-title">MBBS FRCS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Consultant Urological Surgeon; Cambridge University Hospitals NHS Foundation Trust</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="93">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/093.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Piyush Agrawal</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Surgery and Urology, Director - Bladder Cancer Program, Fellowship Director - Urologic Oncology; The University of Chicago</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="94">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/094.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Hikmat Al-Ahmadie</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Genitourinary Pathologist; Memorial Sloan Kettering Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="95">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/095.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Rikiya Taoka</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology; Kagawa University</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="96">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/096.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Scott E. Delacroix Jr.</p>
+                <p class="person-title">MD FACS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Urology, Director of Urologic Oncology; Louisiana State University School of Medicine</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="97">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/097.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Jonathan Rosenberg</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Chief of Genitourinary Oncology and Enno W. Ercklentz Chair; Memorial Sloan Kettering Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="98">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/098.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Kenneth Chen</p>
+                <p class="person-title">MD MBBS</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology; Duke-NUS Medical School, Singapore General Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="99">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/099.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">David D&#39;Andrea</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology; Medical University of Vienna</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="100">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/100.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Jørgen Bjerggaard Jensen</p>
+                <p class="person-title">MD DMSc</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor and Chair, Head of Research; Department of Urology, Aarhus University Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="101">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/101.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Arturo Mendoza-Valdés</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Urology; Hospital Médica Sur</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="102">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/102.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Robert Svatek</p>
+                <p class="person-title">MD MSci</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Urology, Distinguished Chair in Genitourinary Oncology; UT Health San Antonio</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="103">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/103.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Max R. Kates</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor, Director - Division of Urologic Oncology; Brady Urologic Institute at Johns Hopkins Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="104">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/104.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Fernando C. Maluf</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Chief of Medical Oncology; Hospital Beneficência Portuguesa</li>
+                
+                    <li>Medical Oncology Center, Hospital Israelita Albert Einstein</li>
+                
+                    <li>Associate Professor; Faculty of Medical Sciences of Santa Casa de São Paulo</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="105">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/105.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Amanda Myers</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Urologic Oncology Fellow; UT MD Anderson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="106">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/106.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Mark D. Tyson</p>
+                <p class="person-title">MD MPH</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor of Urology; Mayo Clinic</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card" id="107">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/107.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Dingwei Ye</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor and Medical Director of GU Cancer; Fudan University Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+
+            </div>
+        </div>
+    </body>
+
+</html>

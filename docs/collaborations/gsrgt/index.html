@@ -1,0 +1,305 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <title>GSRGT - IBCG</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+            <a href="/collaborations/">Collaborations</a>
+            <a href="/events/">Events</a>
+            <a href="/library/">Library</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div id="main-pane">
+            
+            <div id="content-head">
+                
+<div class="image-head">
+    <h2>International Bladder Cancer Group</h2>
+    <h1>Global Society for Rare GU Tumors</h1>
+</div>
+
+            </div>
+            
+            <div id="content-main">
+                
+
+<p>
+
+In 2021, the International Bladder Cancer Group (IBCG) and Global Society of Rare GU Tumors (GSRGT) launched a joint committee on rare variants of bladder cancer. Bladder cancer is a significant global health issue, and the incidence of rare variants is increasing. This committee brings together stakeholders from both organizations to collaborate on research, education, and clinical trial endpoints with a focus on rare bladder cancer histologic subtypes and genetic variants.
+
+</p>
+
+
+    
+    <div class="card" id="18">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/018.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Philippe Spiess</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="6">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/006.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Andrea Necchi</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Associate Professor; Vita-Salute San Raffaele University</li>
+                
+                    <li>Head of Genitourinary Medical Oncology; IRCCS San Raffaele Hospital</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="27">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/027.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Shilpa Gupta</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Scientific Board Member; IBCG</li>
+                
+                    <li>Professor and Staff; Department of Medical Urology, Cleveland Clinic</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="50">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/050.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Roger Li</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Scientific Board Member; IBCG</li>
+                
+                    <li>Assistant Member; Department of Genitourinary Oncology, H. Lee Moffitt Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="1">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/001.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Petros Grivas</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor, Clinical Director of GU cancers program; University of Washington, Fred Hutchinson Cancer Center</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="33">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/033.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Karima Oualla</p>
+                <p class="person-title">MD MSc</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="75">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/075.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Jeffrey Ross</p>
+                <p class="person-title">MD PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="73">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/073.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Lara Harik</p>
+                <p class="person-title">MD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="74">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/074.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Gagan Praskash</p>
+                <p class="person-title">MBBS MCh</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="card" id="72">
+    <div class="person-card">
+        <div class="person-image">
+            <img src="/members/people/pics/072.jpg"></img>
+        </div>
+        <div class="person-text">
+            <div class="person-identifiers">
+                <p class="person-name">Lars Dyrskjøt Andersen</p>
+                <p class="person-title">PhD</p>
+            </div>
+            <div class="person-positions">
+                <ul>
+                
+                    <li>Professor of Molecular Medicine; Aarhus University</li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% import 'modules/card.html' as card %}
+
+{% block c_title %}Library{% endblock %}
+
+{% block c_main %}
+
+{% for library_item in library %}
+    {{ card.card(library_item.title, library_item.summary, library_item.link) }}
+{% endfor %}
+
+{% endblock %}
+
