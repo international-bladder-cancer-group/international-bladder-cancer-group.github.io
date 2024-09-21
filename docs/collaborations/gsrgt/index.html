@@ -46,6 +46,14 @@
                 else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
                 $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
             }
+
+            function displayOverlay() {
+                $('#content-overlay').removeClass('gone');
+            }
+
+            function hideOverlay() {
+                $('#content-overlay').addClass('gone');
+            }
         </script>
     </head>
 
@@ -63,18 +71,19 @@
             <a href="/contact/">Contact</a>
         </div>
         <div id="main-pane">
-            
-            <div id="content-head">
+            <div class="content-container">
                 
+                <div id="content-head">
+                    
 <div class="image-head">
     <h2>International Bladder Cancer Group</h2>
     <h1>Global Society for Rare GU Tumors</h1>
 </div>
 
-            </div>
-            
-            <div id="content-main">
+                </div>
                 
+                <div id="content-main">
+                    
 
 <p>
 
@@ -302,7 +311,9 @@ In 2021, the International Bladder Cancer Group (IBCG) and Global Society of Rar
 
 
 
+                </div>
             </div>
+            
         </div>
     </body>
 

@@ -21,3 +21,25 @@
 </div>
 {%- endmacro %}
 
+{% macro persontile(id, name, title, image_url, on_click) -%}
+<div class="person-tile" id="{{ id }}">
+    <div class="person-image">
+        <img src="{{ image_url }}"></img>
+        <div class="person-overlay">
+            <div class="person-overlay-container">
+                <div class="person-overlay-content">
+                    <div class="person-details">
+                        <p class="person-name">{{ name }}</p>
+                        <p class="person-title">{{ title }}</p>
+                    </div>
+                </div>
+                <div class="person-expand" onclick="{{ on_click }}">
+                    <a>View&nbsp;more&nbsp;⇒</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+

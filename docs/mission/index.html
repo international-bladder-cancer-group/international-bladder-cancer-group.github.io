@@ -46,6 +46,14 @@
                 else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
                 $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
             }
+
+            function displayOverlay() {
+                $('#content-overlay').removeClass('gone');
+            }
+
+            function hideOverlay() {
+                $('#content-overlay').addClass('gone');
+            }
         </script>
     </head>
 
@@ -63,18 +71,19 @@
             <a href="/contact/">Contact</a>
         </div>
         <div id="main-pane">
-            
-            <div id="content-head">
+            <div class="content-container">
                 
+                <div id="content-head">
+                    
 <div class="image-head">
     <h2>International Bladder Cancer Group</h2>
     <h1>Mission Statement</h1>
 </div>
 
-            </div>
-            
-            <div id="content-main">
+                </div>
                 
+                <div id="content-main">
+                    
 
 <p>
 The International Bladder Cancer Group (IBCG) is a globally recognized entity that has published numerous peer-reviewed articles addressing knowledge gaps in - and providing recommendations for - the management of bladder cancer.
@@ -110,7 +119,9 @@ These initiatives and projects will help continue the IBCG mission which will al
 
 </p>
 
+                </div>
             </div>
+            
         </div>
     </body>
 

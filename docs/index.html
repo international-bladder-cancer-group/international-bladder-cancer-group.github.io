@@ -46,6 +46,14 @@
                 else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
                 $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
             }
+
+            function displayOverlay() {
+                $('#content-overlay').removeClass('gone');
+            }
+
+            function hideOverlay() {
+                $('#content-overlay').addClass('gone');
+            }
         </script>
     </head>
 
@@ -63,18 +71,19 @@
             <a href="/contact/">Contact</a>
         </div>
         <div id="main-pane">
-            
-            <div id="content-head">
+            <div class="content-container">
                 
+                <div id="content-head">
+                    
 <div class="image-head" id="home-head">
     <h2>We are the</h2>
     <h1>International Bladder Cancer Group</h1>
 </div>
 
-            </div>
-            
-            <div id="content-main">
+                </div>
                 
+                <div id="content-main">
+                    
 
 <div class="mosaic">
     <div class="tile">
@@ -137,7 +146,9 @@
 </div>
 
 
+                </div>
             </div>
+            
         </div>
     </body>
 

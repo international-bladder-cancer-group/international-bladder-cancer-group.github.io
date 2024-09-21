@@ -46,6 +46,14 @@
                 else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
                 $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
             }
+
+            function displayOverlay() {
+                $('#content-overlay').removeClass('gone');
+            }
+
+            function hideOverlay() {
+                $('#content-overlay').addClass('gone');
+            }
         </script>
     </head>
 
@@ -63,9 +71,10 @@
             <a href="/contact/">Contact</a>
         </div>
         <div id="main-pane">
-            
-            <div id="content-main">
+            <div class="content-container">
                 
+                <div id="content-main">
+                    
 
 <div class="centered-column">
     <iframe 
@@ -85,7 +94,9 @@
 
 
 
+                </div>
             </div>
+            
         </div>
     </body>
 

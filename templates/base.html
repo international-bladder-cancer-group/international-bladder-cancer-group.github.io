@@ -46,6 +46,14 @@
                 else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
                 $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
             }
+
+            function displayOverlay() {
+                $('#content-overlay').removeClass('gone');
+            }
+
+            function hideOverlay() {
+                $('#content-overlay').addClass('gone');
+            }
         </script>
     </head>
 
@@ -63,14 +71,27 @@
             <a href="/contact/">Contact</a>
         </div>
         <div id="main-pane">
-            {% if self.c_head() %}
-            <div id="content-head">
-                {% block c_head %}{% endblock %}
+            <div class="content-container">
+                {% if self.c_head() %}
+                <div id="content-head">
+                    {% block c_head %}{% endblock %}
+                </div>
+                {% endif %}
+                <div id="content-main">
+                    {% block c_main %}{% endblock %}
+                </div>
+            </div>
+            {% if self.c_overlay() %}
+            <div id="content-overlay" class="gone">
+                <div class="overlay-container">
+                    <div onclick="hideOverlay()" class="overlay-close">
+                        <i class="material-icons">close</i>
+                        <p>Close</p>
+                    </div>
+                    {% block c_overlay %}{% endblock %}
+                </div>
             </div>
             {% endif %}
-            <div id="content-main">
-                {% block c_main %}{% endblock %}
-            </div>
         </div>
     </body>
 
