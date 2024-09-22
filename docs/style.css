@@ -91,6 +91,9 @@ body {
 }
 #main-pane .content-container {
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 #main-pane #content-overlay {
   overflow-y: scroll;

@@ -55,11 +55,11 @@ def process_events(**kwargs):
             'future': sorted(future_events, key = lambda e: e['key_date'], reverse = False)
             }
 
-def process_previews(collection, **kwargs):
+def process_previews(collection, sortf = lambda f: f.name, **kwargs):
     previews = []
     for f in sorted(
             [f for f in os.scandir('templates/' + collection) if f.is_file()],
-            key = lambda f: f.name):
+            key = sortf):
 
         template = load(collection + '/' + f.name)
 
@@ -160,6 +160,7 @@ load('events.html').stream(
         ).dump('docs/events/index.html')
 load('library.html').stream(
         library = process_previews('library',
+                                   lambda f: chr(0) + f.name if 'newsletter' in f.name else f.name,
                                    issues=get_newsletters())
         ).dump('docs/library/index.html')
 load('contact.html').stream().dump('docs/contact/index.html')
