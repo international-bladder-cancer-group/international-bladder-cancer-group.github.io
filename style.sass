@@ -21,13 +21,24 @@ body
 
 #nav-toggle-container
   display: none
-  padding: 1em
   background-color: $lightaccent
   color: $foreground
 
   @media ($small)
     display: flex
-    align-items: flex-end
+    align-items: center
+    justify-content: space-between
+
+  .nav-content
+    padding: 1em 0 1em 1em
+    display: flex
+    align-items: baseline
+
+  .nav-logo
+    height: calc(1em + 24px + 1em)
+
+    img
+      height: 100%
 
   #nav-current-title
     color: $foreground
@@ -46,7 +57,8 @@ body
   display: flex
   flex-direction: row
   justify-content: center
-  align-items: baseline
+  align-items: stretch
+  height: calc(1em + 24px + 1em)
 
   @media ($small)
     flex-direction: column
@@ -55,6 +67,12 @@ body
 
     &.gone
       display: none
+
+    .nav-logo
+      display: none
+
+  .nav-logo
+    height: 100%
 
   a
     color: $foreground
