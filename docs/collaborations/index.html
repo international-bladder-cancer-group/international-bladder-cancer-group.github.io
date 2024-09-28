@@ -27,6 +27,7 @@
 
         <script>
             $(document).ready(function() {
+                // set current page in nav bar
                 $('#nav-pane > a').each(
                     function (index, value) {
                         var link = $(this).attr('href');
@@ -38,6 +39,18 @@
                             $('#nav-current-title').html($(this).html());
                             $('#nav-current-title').attr('href', link);
                             $(this).addClass('gone');
+                        }
+                    }
+                );
+
+                // set all external links to open in new tab
+                $('a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href')
+                        if (link.includes('http://') || link.includes('https://')) {
+                            // external link
+                            $(this).attr('target', '_blank');
+                            $(this).attr('rel', 'noopener noreferrer');
                         }
                     }
                 );
