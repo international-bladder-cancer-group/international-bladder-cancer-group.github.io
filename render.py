@@ -154,6 +154,7 @@ load('members.html').stream(
 load('collaborations.html').stream(
         collaborations = process_previews(
             'collaborations',
+            lambda f: chr(0) + f.name if 'urotoday' in f.name else f.name,
             people = people
             )
         ).dump('docs/collaborations/index.html')

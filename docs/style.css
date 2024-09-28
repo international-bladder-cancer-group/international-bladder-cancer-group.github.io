@@ -289,6 +289,10 @@ body {
   grid-auto-rows: auto;
   grid-template-columns: auto min-content;
 }
+.link-card .card-content {
+  display: flex;
+  flex-direction: column;
+}
 .link-card .card-link {
   margin: 0;
   display: flex;
@@ -489,6 +493,11 @@ body {
 }
 .overlay-close p {
   margin: 0;
+}
+
+.twitter {
+  background-color: black !important;
+  color: white !important;
 }
 
 /*# sourceMappingURL=style.css.map */

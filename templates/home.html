@@ -30,7 +30,13 @@
                 <a href="/contact">&rArr;</a>
             </div>
         </div>
-    </div>
+        <div class="link-card twitter">
+            <p class="card-title">Follow us on X</p>
+            <div class="card-link twitter">
+                <a class="twitter" href="https://x.com/IBCG_BladderCA">&rArr;</a>
+            </div>
+        </div>
+     </div>
     <div class="tile">
         <p class="tile-title">Concluded</p>
         {{ eventcard.eventcard(last_event.title, last_event.summary, last_event.dates, last_event.link) }}
@@ -38,10 +44,6 @@
     <div class="tile">
         <p class="tile-title">Upcoming</p>
         {{ eventcard.eventcard(next_event.title, next_event.summary, next_event.dates, next_event.link) }}
-    </div>
-
-    <div class="tile" style="max-height: 26rem; overflow-x: hidden; overflow-y: scroll">
-        <a class="twitter-timeline" href="https://twitter.com/IBCG_BladderCA?ref_src=twsrc%5Etfw"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 
 </div>
