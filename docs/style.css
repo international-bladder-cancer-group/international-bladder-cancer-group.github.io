@@ -500,4 +500,18 @@ body {
   color: white !important;
 }
 
+.bci-row {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+@media (max-width: 60rem) {
+  .bci-row {
+    flex-direction: column;
+  }
+}
+.bci-row img {
+  border: 4pt solid gray;
+}
+
 /*# sourceMappingURL=style.css.map */

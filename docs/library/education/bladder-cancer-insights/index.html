@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <title>Bladder Cancer Insights - IBCG</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script defer 
+            src="https://cloud.umami.is/script.js"
+            data-website-id="f39a67c9-2700-4d19-958b-271f4390af9e">
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                // set current page in nav bar
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+
+                // set all external links to open in new tab
+                $('a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href')
+                        if (link.includes('http://') || link.includes('https://')) {
+                            // external link
+                            $(this).attr('target', '_blank');
+                            $(this).attr('rel', 'noopener noreferrer');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+
+            function displayOverlay() {
+                $('#content-overlay').removeClass('gone');
+            }
+
+            function hideOverlay() {
+                $('#content-overlay').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <div class="nav-content">
+                <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+                <a id="nav-current-title"></a>
+            </div>
+            <div class="nav-logo">
+                <img src="/logo.jpeg"/>
+            </div>
+        </div>
+        <div id="nav-pane" class="gone">
+            <img src="/logo.jpeg" class="nav-logo"/>
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+            <a href="/collaborations/">Collaborations</a>
+            <a href="/events/">Events</a>
+            <a href="/library/">Library</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div id="main-pane">
+            <div class="content-container">
+                
+                <div id="content-main">
+                    
+
+<div class="centered-column">
+    <div class="bci-row">
+        <img src="/bci/title_image.webp" />
+        <img src="/bci/diagnosis_and_staging.webp" />
+        <img src="/bci/management_low_risk.webp" />
+        <img src="/bci/management_high_risk.webp" />
+    </div>
+    <div class="bci-row">
+        <img src="/bci/bcg_use.webp" />
+        <img src="/bci/management_muscle.webp" />
+        <img src="/bci/surveillance.webp" />
+    </div>
+    <p>This educational activity is brought to you by Janssen Biotech, Inc., and is not certified for continuing medical education. The consultants have been paid an honorarium by Janssen Biotech, Inc. The speaker is presenting on behalf of Johnson & Johnson and must present information in compliance with FDA requirements applicable to Johnson & Johnson.</p>
+    <p>This presentation was produced in collaboration with IBCG and Janssen Pharmaceuticals, Inc., a Johnson & Johnson company.</p>
+</div>
+
+
+                </div>
+            </div>
+            
+        </div>
+    </body>
+
+</html>

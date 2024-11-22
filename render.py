@@ -57,6 +57,7 @@ def process_events(**kwargs):
 
 def process_previews(collection, sortf = lambda f: f.name, **kwargs):
     previews = []
+    paths_created = set()
     for f in sorted(
             [f for f in os.scandir('templates/' + collection) if f.is_file()],
             key = sortf):
@@ -74,9 +75,32 @@ def process_previews(collection, sortf = lambda f: f.name, **kwargs):
 
         path = 'docs/' + collection + '/' + link
         os.mkdir(path)
+        paths_created.add(path)
         template.stream(kwargs).dump(path + '/index.html', encoding='utf-8')
 
+    recursively_process_pages(collection, paths_created, sortf, **kwargs)
+
     return previews
+
+def recursively_process_pages(collection, paths_created, sortf = lambda f: f.name, **kwargs):
+    for d in sorted(
+            [d for d in os.scandir('templates/' + collection) if d.is_dir()],
+            key = sortf):
+
+        candidate_path = 'docs/' + collection + '/' + d.name
+        if candidate_path not in paths_created:
+            os.mkdir(candidate_path)
+
+        for f in sorted(
+                [f for f in os.scandir('templates/' + collection + '/' + d.name) if f.is_file()],
+                key = sortf):
+
+            template = load(collection + '/' + d.name + '/' + f.name)
+            path = candidate_path + '/' + f.name
+            template.stream(kwargs).dump(path, encoding='utf-8')
+
+        recursively_process_pages(collection + '/' + d.name, paths_created, sortf, **kwargs)
+
 
 def get_newsletters():
     newsletters = []
@@ -143,6 +167,7 @@ shutil.copy('sources/logo.jpeg', 'docs')
 
 shutil.copytree('sources/newsletters', 'docs/newsletter-issues')
 shutil.copytree('sources/documents', 'docs/documents')
+shutil.copytree('sources/bci', 'docs/bci')
 
 events = process_events()
 mission_summary = process_mission()
