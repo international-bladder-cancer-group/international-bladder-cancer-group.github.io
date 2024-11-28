@@ -41,10 +41,12 @@
         <p class="tile-title">Concluded</p>
         {{ eventcard.eventcard(last_event.title, last_event.summary, last_event.dates, last_event.link) }}
     </div>
+    {% if next_event is not none %}
     <div class="tile">
         <p class="tile-title">Upcoming</p>
         {{ eventcard.eventcard(next_event.title, next_event.summary, next_event.dates, next_event.link) }}
     </div>
+    {% endif %}
 
 </div>
 

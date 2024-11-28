@@ -195,7 +195,7 @@ load('contact.html').stream().dump('docs/contact/index.html')
 
 load('home.html').stream(
         mission_summary = mission_summary,
-        next_event = events['future'][0],
+        next_event = events['future'][0] if len(events['future']) else None,
         last_event = events['past'][0]
         ).dump('docs/index.html')
 
