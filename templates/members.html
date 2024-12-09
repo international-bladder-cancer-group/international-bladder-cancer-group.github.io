@@ -139,6 +139,17 @@
                 105,
                 106,
                 107,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
                 77
             ]
         };
@@ -169,9 +180,9 @@
     </script>
 
     <select id="member-list-changer" name="member-list" class="dropdown" onchange="loadMembers(this);">
-        <option value="core_committee">Core Committee</option>
-        <option value="founding_members">Founding Members</option>
+        <option value="core_committee">Members</option>
         <option value="board_members">Board Members</option>
+        <option value="founding_members">Founding Members</option>
         <option value="editorial_board">Editorial Board</option>
     </select>
 
@@ -186,7 +197,7 @@
 
 {% block c_overlay %}
 {% for id, p in people.items() | sort(attribute='0') %}
-    {{ personcard.personcard(p.id, p.name, p.title, p.positions, p.image_url) }}
+    {{ personcard.personcard(p.id, p.name, p.title, p.location, p.positions, p.image_url) }}
 {% endfor %}
 {% endblock %}
 

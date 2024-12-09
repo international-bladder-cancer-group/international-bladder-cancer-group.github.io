@@ -1,4 +1,4 @@
-{% macro personcard(id, name, title, positions, image_url) -%}
+{% macro personcard(id, name, title, location, positions, image_url) -%}
 <div class="card" id="{{ id }}">
     <div class="person-card">
         <div class="person-image">
@@ -9,6 +9,11 @@
                 <p class="person-name">{{ name }}</p>
                 <p class="person-title">{{ title }}</p>
             </div>
+            {% if location != "" %}
+            <div class="person-location">
+                <i class="material-icons">location_on</i><p>{{ location }}</p>
+            </div>
+            {% endif %}
             <div class="person-positions">
                 <ul>
                 {% for position in positions %}

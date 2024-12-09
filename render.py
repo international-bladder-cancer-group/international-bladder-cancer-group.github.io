@@ -126,6 +126,7 @@ class Person:
     id: int
     name: str
     title: str
+    location: str
     positions: list[str]
     image_url: str
 
@@ -144,6 +145,7 @@ def process_people():
                 person_dict['id'],
                 person_dict['name'],
                 person_dict['title'],
+                person_dict.get('location', ""),
                 person_dict['positions'],
                 image_url)
 
@@ -172,6 +174,15 @@ shutil.copytree('sources/bci', 'docs/bci')
 events = process_events()
 mission_summary = process_mission()
 people = process_people()
+
+# export people to csv
+import csv
+with open('all_members.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    people_object_list = [people[k] for k in sorted([id for id in people.keys()])]
+    people_data_list = [[p.id, p.name, p.title, p.location, p.positions] for p in people_object_list]
+    writer.writerows(people_data_list)
+
 
 load('members.html').stream(
         people = people

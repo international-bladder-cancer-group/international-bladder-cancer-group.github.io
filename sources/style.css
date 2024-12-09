@@ -445,7 +445,6 @@ body {
   flex-direction: column;
   margin-left: 1rem;
   margin-right: 1rem;
-  gap: 1rem;
 }
 @media (max-width: 36rem) {
   .person-text {
@@ -477,6 +476,17 @@ body {
   font-style: italic;
   margin-top: 0;
   margin-bottom: 0;
+}
+.person-text .person-location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.person-text .person-location p {
+  margin: 0;
+}
+.person-text .person-positions {
+  margin-top: 1rem;
 }
 .person-text .person-positions ul {
   margin-top: 0;
