@@ -165,7 +165,7 @@ shutil.copy('sources/style.css', 'docs')
 shutil.copy('sources/style.css.map', 'docs')
 shutil.copy('sources/style.css.map', 'docs')
 shutil.copy('sources/houstonnight.jpg', 'docs')
-shutil.copy('sources/logo.jpeg', 'docs')
+shutil.copy('sources/logo.png', 'docs')
 
 shutil.copytree('sources/newsletters', 'docs/newsletter-issues')
 shutil.copytree('sources/documents', 'docs/documents')

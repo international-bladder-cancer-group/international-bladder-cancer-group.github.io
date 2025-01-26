@@ -9,7 +9,7 @@ body {
 
 #nav-toggle-container {
   display: none;
-  background-color: #ffd45a;
+  background-color: #ffffff;
   color: #000000;
 }
 @media (max-width: 60rem) {
@@ -43,7 +43,7 @@ body {
 
 #nav-pane {
   color: #000000;
-  background-color: #ffd45a;
+  background-color: #ffffff;
   width: 100%;
   max-width: 100%;
   display: flex;
@@ -72,14 +72,15 @@ body {
   color: #000000;
   text-decoration: none;
   padding: 0.75em 1em;
-  border: 2px solid #ffd45a;
-}
-#nav-pane a.active {
-  background-color: #ffffff;
   border: 2px solid #ffffff;
 }
+#nav-pane a.active {
+  background-color: #ffcf71;
+  border: 2px solid #ffcf71;
+}
 #nav-pane a:hover, #nav-pane a:active {
-  border: 2px solid #000000;
+  color: #a821aa;
+  border: 2px solid #a821aa;
 }
 @media (max-width: 60rem) {
   #nav-pane a {
@@ -155,7 +156,7 @@ body {
 .mosaic {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 }
 @media (max-width: 60rem) {
   .mosaic {
@@ -225,10 +226,12 @@ body {
   align-items: center;
 }
 
+.card, .link-card {
+  margin-bottom: 1rem;
+}
+
 .card, .link-card, .overlay-close {
   background-color: #ffffff;
-  border: 2px solid #000000;
-  margin-bottom: 1rem;
 }
 .card.gone, .link-card.gone, .overlay-close.gone {
   display: none;
@@ -261,13 +264,12 @@ body {
 }
 .card .card-title, .link-card .card-title, .overlay-close .card-title {
   font-size: 18pt;
-  margin-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: bold;
 }
 .card .card-info, .link-card .card-info, .overlay-close .card-info {
-  margin: 0 1rem 1rem 1rem;
+  margin: 0 1rem 1rem 0rem;
 }
 .card .card-link, .link-card .card-link, .overlay-close .card-link {
   margin: 0;
@@ -277,9 +279,8 @@ body {
 }
 .card .card-link a, .link-card .card-link a, .overlay-close .card-link a {
   color: #000000;
-  border-top: 2px solid #000000;
-  border-left: 2px solid #000000;
-  background-color: #ffd45a;
+  border: 2px solid #000000;
+  background-color: #ffcf71;
   text-decoration: none;
   padding: 0.25rem;
 }
@@ -298,8 +299,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-left: 2px solid #000000;
-  background-color: #ffd45a;
+  border: 2px solid #000000;
+  background-color: #ffcf71;
 }
 .link-card .card-link a {
   border: none;
@@ -319,7 +320,7 @@ body {
 }
 .image-head h2 {
   margin: 3rem auto 0 auto;
-  color: #ffd45a;
+  color: #ffcf71;
 }
 .image-head h1 {
   max-width: 60rem;
@@ -508,6 +509,12 @@ body {
 .twitter {
   background-color: black !important;
   color: white !important;
+}
+
+.youtube {
+  background-color: darkred !important;
+  color: white !important;
+  border-color: darkred !important;
 }
 
 .bci-row {

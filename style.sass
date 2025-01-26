@@ -1,6 +1,7 @@
 $background:  #ffffff
 $foreground:  #000000
-$lightaccent: #ffd45a
+$lightaccent: #ffcf71
+$darkaccent:  #a821aa
 
 $overlaybackground: rgba(64, 64, 64, 0.66)
 $overlayforeground: #ffffff
@@ -21,7 +22,7 @@ body
 
 #nav-toggle-container
   display: none
-  background-color: $lightaccent
+  background-color: $background
   color: $foreground
 
   @media ($small)
@@ -51,7 +52,7 @@ body
 
 #nav-pane
   color: $foreground
-  background-color: $lightaccent
+  background-color: $background
   width: 100%
   max-width: 100%
   display: flex
@@ -78,14 +79,15 @@ body
     color: $foreground
     text-decoration: none
     padding: 0.75em 1em
-    border: 2px solid $lightaccent
+    border: 2px solid $background
 
     &.active
-      background-color: $background
-      border: 2px solid $background
+      background-color: $lightaccent
+      border: 2px solid $lightaccent
 
     &:hover, &:active
-      border: 2px solid $foreground
+      color: $darkaccent
+      border: 2px solid $darkaccent
 
     @media ($small)
       text-align: left
@@ -153,7 +155,7 @@ body
 .mosaic
   display: grid
   grid-template-columns: repeat(6, 1fr)
-  grid-gap: 1rem
+  grid-gap: 2rem
 
   @media ($small)
     display: flex
@@ -210,10 +212,12 @@ body
   flex-direction: column
   align-items: center
 
+.card, .link-card
+  margin-bottom: 1rem
+
 .card, .link-card, .overlay-close
   background-color: $background
-  border: 2px solid $foreground
-  margin-bottom: 1rem
+  // border: 2px solid $foreground
 
   &.gone
     display: none
@@ -244,13 +248,14 @@ body
 
   .card-title
     font-size: 18pt
-    margin-left: 1rem
+    //margin-left: 1rem
     margin-top: 1rem
+    //margin-top: 0rem
     margin-bottom: 1rem
     font-weight: bold
 
   .card-info
-    margin: 0 1rem 1rem 1rem
+    margin: 0 1rem 1rem 0rem
 
   .card-link
     margin: 0
@@ -260,8 +265,9 @@ body
 
     a
       color: $foreground
-      border-top: 2px solid $foreground
-      border-left: 2px solid $foreground
+      border: 2px solid $foreground
+      // border-top: 2px solid $foreground
+      // border-left: 2px solid $foreground
       background-color: $lightaccent
       text-decoration: none
       padding: 0.25rem
@@ -280,7 +286,8 @@ body
     display: flex
     flex-direction: column
     justify-content: center
-    border-left: 2px solid $foreground
+    border: 2px solid $foreground
+    //border-left: 2px solid $foreground
     background-color: $lightaccent
 
     a
@@ -476,6 +483,11 @@ body
 .twitter
   background-color: black !important
   color: white !important
+
+.youtube
+  background-color: darkred !important
+  color: white !important
+  border-color: darkred !important
 
 .bci-row
   display: flex
