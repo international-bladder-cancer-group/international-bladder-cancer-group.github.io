@@ -132,7 +132,7 @@ body
     &.gone
       display: none
 
-#content-main, .overlay-container
+#content-main, .overlay-container, .content-main
   margin: auto
   display: flex
   flex-direction: column
@@ -489,9 +489,87 @@ body
   color: white !important
   border-color: darkred !important
 
+.bci-container
+  width: 100%
+  background-color: lightgray
+  padding-top: 2em
+  padding-bottom: 2em
+
+.bci-content-main
+  display: flex
+  flex-direction: row
+  gap: 1rem
+  margin: auto
+  padding-left: 2em
+  padding-right: 2em
+  width: 80em
+  flex-grow: 1
+  max-width: calc(100% - 4em)
+
+  @media ($small)
+    flex-direction: column
+
+  .bci-video-column
+    display: flex
+    flex-direction: column
+    width: 60%
+
+    @media ($small)
+      width: 100%
+
+    .bci-video
+      border: 1px solid gray
+
+    .bci-video-info
+      display: flex
+      flex-direction: column
+      margin: 1em
+      gap: 0.75em
+
+      .bci-video-title
+        font-size: 14pt
+        font-weight: bold
+
+      .bci-video-description
+        color: darkslategray
+
+  .bci-menu-column
+    display: flex
+    flex-direction: column
+    width: 40%
+    gap: 1em
+
+    @media ($small)
+      width: 100%
+
+    .bci-menu-item
+      display: flex
+      flex-direction: row
+      justify-content: end
+      align-items: center
+      gap: 1em
+      text-align: right
+      cursor: pointer
+
+      .bci-menu-item-title
+        font-size: 14pt
+        font-weight: bold
+
+      .bci-menu-item-image
+        width: 5em
+        height: 5em
+
+    .bci-menu-divider
+      height: 1px
+      background-color: gray
+      width: 100%
+
+.bci-disclaimer
+  font-size: 10pt
+  color: darkslategray
+
 .bci-row
   display: flex
-  gap: 1rem
   padding-bottom: 1rem
 
   @media ($small)

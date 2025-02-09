@@ -1,24 +1,14 @@
-{% extends 'base.html' %}
+{% extends 'library/education/bladder-cancer-insights/bci-base.html' %}
 
-{% block c_title %}Bladder Cancer Insights{% endblock %}
+{% block c_video %}
 
-{% block c_main %}
+<img class="bci-video" src="/bci/placeholder_image.png" />
 
-<div class="centered-column">
-    <div class="bci-row">
-        <img src="/bci/title_image.webp" />
-        <img src="/bci/diagnosis_and_staging.webp" />
-        <img src="/bci/management_low_risk.webp" />
-        <img src="/bci/management_high_risk.webp" />
+<div class="bci-video-info">
+    <div class="bci-video-title">Introduction</div>
+    <div class="bci-video-description">
+        IBCG and Johnson & Johnson have partnered to produce a new video series for healthcare professionals managing patients with bladder cancer. Learn more about Bladder Cancer Insights: Empowering Personalized Care.
     </div>
-    <div class="bci-row">
-        <img src="/bci/bcg_use.webp" />
-        <img src="/bci/management_muscle.webp" />
-        <img src="/bci/surveillance.webp" />
-    </div>
-    <p>This educational activity is brought to you by Janssen Biotech, Inc., and is not certified for continuing medical education. The consultants have been paid an honorarium by Janssen Biotech, Inc. The speaker is presenting on behalf of Johnson & Johnson and must present information in compliance with FDA requirements applicable to Johnson & Johnson.</p>
-    <p>This presentation was produced in collaboration with IBCG and Janssen Pharmaceuticals, Inc., a Johnson & Johnson company.</p>
 </div>
 
 {% endblock %}
-

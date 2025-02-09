@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block c_title %}Bladder Cancer Insights{% endblock %}
+
+{% block c_head %}
+
+<div class="centered-column">
+    <div class="bci-content-main">
+        <img style="height: 8em" src="/bci/header.png"/>
+    </div>
+</div>
+
+<div class="centered-column">
+    <div class="bci-container">
+        <div class="bci-content-main">
+            <div class="bci-video-column">
+                {% if self.c_video() %}
+                    {% block c_video %}{% endblock %}
+                {% endif %}
+            </div>
+            <div class="bci-menu-column">
+                <div class="bci-menu-item" onclick="location.href='/library/education/bladder-cancer-insights/'">
+                    <p class="bci-menu-item-title">
+                        Introduction
+                    </p>
+                    <img class="bci-menu-item-image" src="/bci/introduction.png"/>
+                </div>
+                <div class="bci-menu-divider"></div>
+                <div class="bci-menu-item" onclick="location.href='/library/education/bladder-cancer-insights/management/'">
+                    <p class="bci-menu-item-title">
+                        Management of High-Risk Non-Muscle Invasive Bladder Cancer
+                    </p>
+                    <img class="bci-menu-item-image" src="/bci/management.png"/>
+                </div>
+                <div class="bci-menu-divider"></div>
+                <div class="bci-menu-item" onclick="location.href='/library/education/bladder-cancer-insights/diagnosis/'">
+                    <p class="bci-menu-item-title">
+                        Diagnosis and Staging of Bladder Cancer
+                    </p>
+                    <img class="bci-menu-item-image" src="/bci/diagnosis.png"/>
+                </div>
+                <div class="bci-menu-divider"></div>
+                <div class="bci-menu-item" onclick="location.href='/library/education/bladder-cancer-insights/treatment/'">
+                    <p class="bci-menu-item-title">
+                        Treatment Considerations with BCG
+                    </p>
+                    <img class="bci-menu-item-image" src="/bci/treatment.png"/>
+                </div>
+                <div class="bci-menu-divider"></div>
+                <div class="bci-menu-item" onclick="location.href='/library/education/bladder-cancer-insights/surveillance/'">
+                    <p class="bci-menu-item-title">
+                        Surveillance and Standard Biomarkers
+                    </p>
+                    <img class="bci-menu-item-image" src="/bci/surveillance.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block c_main %}
+
+<div class="bci-disclaimer centered-column">
+    <p>This educational video series is brought to you by Janssen Biotech, Inc., and is not certified for continuing medical education. The consultants have been paid an honorarium by Janssen Biotech, Inc. The speakers are presenting on behalf of Johnson & Johnson and must present information in compliance with FDA requirements applicable to Johnson & Johnson. These presentations were produced in collaboration with IBCG and Janssen Pharmaceuticals, Inc., a Johnson & Johnson company.</p>
+</div>
+
+{% endblock %}
+
