@@ -508,6 +508,7 @@ body
 
   @media ($small)
     flex-direction: column
+    align-items: start
 
   .bci-video-column
     display: flex
@@ -550,6 +551,10 @@ body
       gap: 1em
       text-align: right
       cursor: pointer
+
+      @media ($small)
+        text-align: left
+        justify-content: space-between
 
       .bci-menu-item-title
         font-size: 14pt

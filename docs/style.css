@@ -538,6 +538,7 @@ body {
 @media (max-width: 60rem) {
   .bci-content-main {
     flex-direction: column;
+    align-items: start;
   }
 }
 .bci-content-main .bci-video-column {
@@ -585,6 +586,12 @@ body {
   gap: 1em;
   text-align: right;
   cursor: pointer;
+}
+@media (max-width: 60rem) {
+  .bci-content-main .bci-menu-column .bci-menu-item {
+    text-align: left;
+    justify-content: space-between;
+  }
 }
 .bci-content-main .bci-menu-column .bci-menu-item .bci-menu-item-title {
   font-size: 14pt;
