@@ -615,6 +615,9 @@ body {
   font-size: 14pt;
   font-weight: bold;
 }
+.bci-content-main .bci-menu-column .bci-menu-item .bci-menu-item-title.short {
+  font-size: 12pt;
+}
 .bci-content-main .bci-menu-column .bci-menu-item .bci-menu-item-image {
   width: 5em;
   height: 5em;
@@ -623,6 +626,11 @@ body {
   height: 1px;
   background-color: gray;
   width: 100%;
+}
+.bci-content-main .bci-menu-column .bci-menu-divider.short {
+  margin-right: 6em;
+  margin-left: 5em;
+  width: calc(100% - 11em);
 }
 
 .bci-disclaimer {
